@@ -7,7 +7,7 @@ buildscript {
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-        //添加gradle-docker 依赖，版本1.2
+        //添加gradle-docker依赖，版本1.2
         classpath 'se.transmode.gradle:gradle-docker:1.2'
 	}
 }
@@ -19,7 +19,6 @@ apply plugin: 'docker'
 
 // This is used as the docker image prefix (org)
 group = 'jianing0'
-//group = 'com.example.springboot'
 
 jar {
     baseName = 'docker-by-gradle'
