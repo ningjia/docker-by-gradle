@@ -83,9 +83,12 @@ docker images
 
 > 启动服务
 ```
-docker run -d -p 8080:8080 jianing0/docker-by-maven
+docker run -d -p 8080:8080 jianing0/docker-by-gradle
 ```
 
-## 三、Refer
+## 三、将镜像推送到DockerHub
+参见[将镜像推送到DockerHub](https://github.com/ningjia/docker-by-maven#四将镜像推送到dockerhub)
+
+## 四、Refer
 - [使用 Gradle 构建 Spring-Boot 的 Docker 镜像](https://www.jianshu.com/p/02f5ace76539)
 - [Gradle Docker plugin（Gradle的Docker插件）官方文档](https://github.com/Transmode/gradle-docker/blob/master/README.md)
