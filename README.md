@@ -1,5 +1,9 @@
 # 基于Gradle的SpringBoot与Docker集成
-## 
+
+## 前期准备
+Docker环境的准备，以及详细操作，需参见[基于Maven的SpringBoot与Docker集成](https://github.com/ningjia/docker-by-maven)
+
+## 一、程序修改
 > 添加依赖
 
 修改build.gradle文件
@@ -61,12 +65,27 @@ task buildDocker(type: Docker) {
 
 按如上信息配置，之后构建生成的Docker镜像名就是：jianing0/docker-by-gradle:latest
 
-##
+## 二、使用Docker部署服务(本地Docker服务器)
 > 生成jar文件
+```
 Tasks -> build -> bootRepackage
+```
 
-> 生成docker镜像文件
+> 构建docker镜像文件
+```
 Tasks -> other -> buildDocker
+```
 
-## Refer
-[使用 Gradle 构建 Spring-Boot 的 Docker 镜像](https://www.jianshu.com/p/02f5ace76539)
+> 检查构建镜像的结果 
+```
+docker images
+```
+
+> 启动服务
+```
+docker run -d -p 8080:8080 jianing0/docker-by-maven
+```
+
+## 三、Refer
+- [使用 Gradle 构建 Spring-Boot 的 Docker 镜像](https://www.jianshu.com/p/02f5ace76539)
+- [Gradle Docker plugin（Gradle的Docker插件）官方文档](https://github.com/Transmode/gradle-docker/blob/master/README.md)
