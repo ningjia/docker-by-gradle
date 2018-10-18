@@ -28,6 +28,12 @@ jar {
 version = '1.0-SNAPSHOT'
 sourceCompatibility = 1.8
 
+//部署至远程docker服务的功能，待完成
+//docker {
+//    useApi true
+//    hostUrl '172.16.115.195:4243'
+//}
+
 task buildDocker(type: Docker) {
     applicationName = jar.baseName
     tagVersion = jar.version
